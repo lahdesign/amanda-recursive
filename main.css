@@ -1,0 +1,281 @@
+@font-face {
+    src: url("./fonts/Recursive_VF_1.085--subset-GF_latin_basic.woff2") format("woff2"),
+         url('./fonts/Recursive_VF_1.085.woff2') format("woff2"),
+        url('./fonts/Recursive_VF_1.085.ttf') format('truetype');
+        /* font-variation-settings: "MONO" 1, "CASL" 0, "wght" 300, "slnt" 0, "CRSV" 0.5; */
+        /* font-variation-settings: "MONO" 0, "CASL" 1, "wght" 1000, "slnt" -15, "CRSV" 1; */
+
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: normal;
+    }
+
+.hero-section {
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; */
+    display: grid;
+    grid-template-rows: 700px 4fr 100px;
+    grid-template-columns: 150px 1fr 150px;
+    /* background-color: rgb(255, 255, 255); */
+}   
+    
+#block-type{
+        /* grid */
+    color: #285E70;
+    text-align: center;
+    font-family: 'Recursive';
+    font-size: 200px;
+    font-weight: 1000;
+    line-height: 210px;
+    font-variation-settings: "MONO" 1, "CASL" 0, "wght" 1000, "slnt" 0, "CRSV" 0;
+    margin: 15px;
+    line-height: 0.85;
+    position:relative;top: 75px;
+    position:relative;left:200px;
+
+    /* animation: weightChange 7s infinite; */
+}
+#cursive-type{
+        /* grid */
+    color: #93C3BB;
+    text-align: center;
+    font-family: 'Recursive';
+    font-size: 200px;
+    font-weight: 1000;
+    line-height: 210px;
+    font-variation-settings: "MONO" 0, "CASL" 1, "wght" 300, "slnt" -15, "CRSV" 1;
+    margin: 15px;
+    line-height: 0.85;
+    position:relative;top: 75px;
+}
+body{
+    background-color:#19373F;
+    color: #69B0A3;
+    font-family: 'Recursive';
+    /* svgs */
+             
+}
+#h{
+   transform: scale(1.4); 
+   position: relative;left:-300px;
+   position: relative;top: -400px ;
+   z-index: -1;
+}
+#star{
+    transform: scale(25); 
+    z-index: -1;
+    position: relative;top: -850px ;
+    outline-color: aliceblue;
+}
+/* how the page wrapper will appear on mobile */
+.page-wrapper{
+    width: min(100% - 3rem, 80ch);
+    margin-inline: auto; 
+}
+/* how the page wrapper appears on desktop */
+
+@media only screen and (min-width:800px){
+.page-wrapper{
+margin-top: 50px;
+margin-left: 270px;
+margin-bottom: -600px;
+display: grid;
+grid-gap: 25px;
+grid-template-columns: 1fr 60px;
+grid-template-rows: auto;
+
+grid-template-areas: 
+    "h v"
+    "a a";
+}}
+
+p{
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.history {
+grid-area: h;
+}
+
+
+
+.variations{
+grid-area: v;
+}
+    #variation-list{
+        list-style-type: none;
+        font-size: 50px;
+    }
+        .monospace{
+            padding-bottom: 30px;
+            animation: monospaceChange 3s infinite;
+        }
+            @keyframes monospaceChange {
+                0%, 
+                100%{font-variation-settings: "MONO" 1, "CASL" 0, "wght" 600, "slnt" 0, "CRSV" 0;}
+                50%{font-variation-settings: "MONO" 0, "CASL" 0, "wght" 600, "slnt" 0, "CRSV" 0;}   
+        }
+        .casual{
+            padding-bottom: 30px;
+            animation: casualChange 3s infinite;
+        }
+            @keyframes casualChange {
+                0%, 
+                100%{font-variation-settings: "MONO" 0, "CASL" 1, "wght" 600, "slnt" 0, "CRSV" 0;}
+                50%{font-variation-settings: "MONO" 0, "CASL" 0, "wght" 600, "slnt" 0, "CRSV" 0;}   
+        }
+            
+        .weight{
+            padding-bottom: 30px;
+            animation: weightChange 3s infinite;
+        }
+            @keyframes weightChange {
+                0%, 
+                100%{font-variation-settings: "MONO" 0, "CASL" 0, "wght" 300, "slnt" 0, "CRSV" 0;}
+                50%{font-variation-settings: "MONO" 0, "CASL" 0, "wght" 1000, "slnt" 0, "CRSV" 0;}   
+        }
+        
+        .slant{
+            padding-bottom: 30px;
+            animation: slantChange 3s infinite;
+        }
+            @keyframes slantChange {
+                0%, 
+                100%{font-variation-settings: "MONO" 0, "CASL" 0, "wght" 600, "slnt" 0, "CRSV" 0;}
+                50%{font-variation-settings: "MONO" 0, "CASL" 0, "wght" 600, "slnt" -15, "CRSV" 0;}   
+        }
+        .cursive{
+            padding-bottom: 30px;
+            animation: cursiveChange 3s infinite;
+        }
+            @keyframes cursiveChange {
+                0%, 
+                100%{font-variation-settings: "MONO" 0, "CASL" 0, "wght" 600, "slnt" 0, "CRSV" 0;}
+                50%{font-variation-settings: "MONO" 0, "CASL" 0, "wght" 600, "slnt" 0, "CRSV" 1;}   
+        }
+
+.button {
+    /* grid-area: a; */
+    background-color: #285E70;
+    color: #A5F9EA;
+    border: none;
+    border-radius: 50px;
+    padding: 160px 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 70px;
+    text-decoration-line: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: block;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    /* text-orientation: mixed; */
+    margin: 60px;
+    margin-right: 520px;
+    position: relative;top: -580px;
+    
+}
+        
+.button:hover {
+    background-color: #457d8b;
+    color: #bef2ff;
+}
+
+.alphabet {
+grid-area: a;
+}
+#set-one{
+    height: fit-content;
+}
+#set-one p{
+    font-variation-settings: "MONO" 0, "CASL" 1, "wght" 1000, "slnt" -15, "CRSV" 1;
+    font-size: 25px;
+    position: relative;left: -400px;
+    position: relative;top: -550px;
+
+    
+}
+#set-two p{
+    font-variation-settings: "MONO" 1, "CASL" 0, "wght" 700, "slnt" 0, "CRSV" 1;
+    font-size: 25px;
+    position: relative;left: -400px;
+    position: relative;top: -550px;
+    
+}
+#set-three p{
+    font-variation-settings: "MONO" 0, "CASL" 0, "wght" 300, "slnt" 0, "CRSV" 0;
+    font-size: 25px;
+    position: relative;left: -400px;
+    position: relative;top: -550px; 
+}
+
+/* CSS for the footer */
+footer{
+    background-color: #69B0A3;
+    height: 140px;
+    color: #19373F;
+    /* color: #ccf4ff; */
+}
+a{
+    text-decoration: none;
+    color: #19373F;
+}
+a:hover{
+    color: #2b5f6d;
+}
+h2{
+    text-align: left;
+    font-size: 40px;
+    padding-top: 10px;
+    position: relative; left: 130px;
+}
+.school-text{
+    position: relative; left: 1020px;
+    position: relative; top: -80px;
+    line-height: 10px;
+}
+.contact-text{
+    position: relative; left: 130px;
+    position: relative; top: -20px;
+    line-height: 10px;
+
+}
+
+/* variable font animation */
+h1{
+    font-variation-settings: "MONO" 1, "CASL" 0, "wght" 800, "slnt" 0, "CRSV" 0;
+    text-align: left;
+    font-size: 35px;
+}
+
+/* variable font that changes on hover */
+/* .variable-font{
+    font-weight:1 ;
+    height:100vh;
+    font-size: 10em;
+    display:grid;
+    place-content: center;
+    margin: 0;
+    text-align: center;
+    font-variation-settings: "wght" 40, "wdth" 0, "XXXX" 1;
+    transition: 
+        font-weight 500ms,
+        font-variation-settings 3s;
+}
+
+.variable-font:hover{
+    font-weight:500 ;
+    height:100vh;
+    font-size: 7em;
+    display:grid;
+    place-content: center;
+    margin: 0;
+    text-align: center;
+    font-variation-settings: "wght" 120, "wdth" 0, "XXXX" 100;
+} */
+
